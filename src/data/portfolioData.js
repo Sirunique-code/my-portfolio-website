@@ -6,10 +6,10 @@ export const portfolioData = {
     jobTitle: "Graphic Designer & Web Developer",
     headlinePart1: "CREATIVE",
     headlinePart2: "DEVELOPER",
-    avatar: "https://framerusercontent.com/images/3NmVs6Ife0wqg36gV9ooKFjyCQE.png",
-    logo: "https://framerusercontent.com/images/xHyrFdhp9ullOsbZZGghsN3XsTU.png",
-    heroVideo: "https://framerusercontent.com/assets/EtFNVEIQDKsxeDVfagwYxBQgg.mp4",
-    heroPoster: "https://framerusercontent.com/images/wXZwsEcvH3BmFvs4Xqi4XISftbY.png",
+    avatar: "/images/avatar.png",
+    logo: "/images/logo.png",
+    heroVideo: "/images/hero-character.mp4",
+    heroPoster: "/images/hero-poster.png",
     statusText: "Available for work",
     chatButtonText: "Let's Connect",
     bio: "Creating visual identities and digital experiences that communicate, connect, and deliver results. Blending 6+ years of design with a Computer Science foundation.",
@@ -26,22 +26,22 @@ export const portfolioData = {
     {
       name: "Figma",
       role: "UI/UX & Prototyping",
-      icon: "https://framerusercontent.com/images/PhCo5zQuRG2TMfsJDGW6EwnbphM.png",
+      icon: "/images/figma.png",
     },
     {
       name: "Photoshop",
       role: "Graphic & Brand Design",
-      icon: "https://framerusercontent.com/images/NHkUEJ9PxY8Wu2Xhg6FYvHBhPoA.png",
+      icon: "/images/photoshop.png",
     },
     {
       name: "VS Code",
       role: "Web Development (React/JS)",
-      icon: "https://framerusercontent.com/images/MyN9xwz5lyTopHfp6i39gedjTg.png",
+      icon: "/images/vscode.png",
     },
     {
       name: "Python",
       role: "Machine Learning & Data",
-      icon: "https://framerusercontent.com/images/vOetPAJEaS0Wxv95bynCztlPM.png",
+      icon: "/images/python.png",
     },
   ],
 
@@ -79,8 +79,8 @@ export const portfolioData = {
       client: "Bimbo Ilori Ministries",
       duration: "4 Weeks",
       year: "2025",
-      coverImage: "https://framerusercontent.com/images/RsTnHvfNRK76yx5K3cW06cQitqg.jpg",
-      showcaseImage: "https://framerusercontent.com/images/m6IPAvzP0stfTn5pO0GQe4ZzznQ.jpg",
+      coverImage: "/images/projects/bimbo-ilori-cover.jpg",
+      showcaseImage: "/images/projects/bimbo-ilori-showcase.jpg",
       liveUrl: "https://sites.google.com/view/thaddeaus-samuel/home",
     },
     {
@@ -93,8 +93,8 @@ export const portfolioData = {
       client: "Private Client",
       duration: "2 Weeks",
       year: "2024",
-      coverImage: "https://framerusercontent.com/images/hY8kTkRIlzMaAB7HLM79kW0IhQ.jpg",
-      showcaseImage: "https://framerusercontent.com/images/FRBYbigq3LlBs5gx2dkgXSrWjY.jpg",
+      coverImage: "/images/projects/wedding-invitation-cover.jpg",
+      showcaseImage: "/images/projects/wedding-invitation-showcase.jpg",
       liveUrl: "https://sites.google.com/view/thaddeaus-samuel/home",
     },
     {
@@ -107,8 +107,8 @@ export const portfolioData = {
       client: "ATBU Computer Science",
       duration: "8 Weeks",
       year: "2025",
-      coverImage: "https://framerusercontent.com/images/0Tsd2w5kFi3BRRMjNlfSdUybSDs.jpg",
-      showcaseImage: "https://framerusercontent.com/images/ON1xmXzrtetiYnqY4SFQ8nvBo.jpg",
+      coverImage: "/images/projects/sales-forecasting-cover.jpg",
+      showcaseImage: "/images/projects/sales-forecasting-showcase.jpg",
       liveUrl: "https://sites.google.com/view/thaddeaus-samuel/home",
     },
     {
@@ -121,8 +121,8 @@ export const portfolioData = {
       client: "Multiple Organizations",
       duration: "Ongoing",
       year: "2020 - 2026",
-      coverImage: "https://framerusercontent.com/images/OVRscnaD3RFU0f29QfVQ3HMB8.jpg",
-      showcaseImage: "https://framerusercontent.com/images/SVFfoYT7lkCpLlVa6rSUAU6lMg.jpg",
+      coverImage: "/images/projects/brand-identity-cover.jpg",
+      showcaseImage: "/images/projects/brand-identity-showcase.jpg",
       liveUrl: "https://sites.google.com/view/thaddeaus-samuel/home",
     },
   ],
@@ -188,21 +188,21 @@ export const portfolioData = {
       title: "Discovery & Strategy",
       description:
         "We discuss your project goals, target audience, and functional requirements to define a clear creative and technical roadmap.",
-      video: "https://framerusercontent.com/assets/9mlXvE9TN1T6LvbfaPoK9F2bkBY.mp4",
+      video: "/images/process-1.mp4",
     },
     {
       number: "02",
       title: "Design & Development",
       description:
         "I transform approved concepts into high-fidelity visuals, interactive prototypes, or clean, responsive web code.",
-      video: "https://framerusercontent.com/assets/y9NMDyZ0ntX4xje6Ix5foOnkZHM.mp4",
+      video: "/images/process-2.mp4",
     },
     {
       number: "03",
       title: "Review & Launch",
       description:
         "We review, refine, and polish every detail before final delivery, ensuring everything runs smoothly with post-launch support.",
-      video: "https://framerusercontent.com/assets/fiyZJo4xOiwxKrM3t8QYZ5LNYnk.mp4",
+      video: "/images/process-3.mp4",
     },
   ],
 
@@ -212,7 +212,7 @@ export const portfolioData = {
       "Whether you need brand identity, a functional website, or an intelligent web app, let's create something meaningful together.",
     cta1: "Start a Project",
     cta2: "Drop a Message",
-    video: "https://framerusercontent.com/assets/3lUP56UHwbbosDus5FlfuALgEQ.mp4",
+    video: "/images/ready.mp4",
   },
 
   testimonial: {
@@ -220,7 +220,7 @@ export const portfolioData = {
       "\"Thaddeaus brings a rare blend of visual excellence and technical competence. He delivered our brand platform with exceptional precision and responsiveness.\"",
     author: "Bimbo Ilori",
     role: "Author & Brand Lead",
-    avatar: "https://framerusercontent.com/images/Brmkbsvgw7oq52QXNYK8FUciR0.jpg",
+    avatar: "/images/testimonial-avatar.jpg",
     rating: 5,
   },
 
@@ -258,7 +258,7 @@ export const portfolioData = {
     consultationDesc:
       "Share your ideas, goals, or requirements. I'm available for freelance projects, remote roles, and creative collaborations.",
     consultationCta: "Send Project Inquiry",
-    video: "https://framerusercontent.com/assets/kJg9WO6nogWKt2PXxdQStKE1w.mp4",
+    video: "/images/contact.mp4",
     socials: [
       { name: "LinkedIn", url: "https://linkedin.com/in/thaddeaus-samuel" },
       { name: "GitHub", url: "https://github.com/thaddeaus-samuel" },

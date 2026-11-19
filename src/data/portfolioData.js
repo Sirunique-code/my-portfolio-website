@@ -34,6 +34,11 @@ export const portfolioData = {
       icon: "/images/photoshop.png",
     },
     {
+      name: "CorelDRAW",
+      role: "Vector & Print Design",
+      icon: "/images/coreldraw.png",
+    },
+    {
       name: "Laravel",
       role: "PHP Web Framework",
       icon: "/images/laravel.png",
@@ -52,6 +57,11 @@ export const portfolioData = {
       name: "Python",
       role: "Machine Learning & Data",
       icon: "/images/python.png",
+    },
+    {
+      name: "AI Tools",
+      role: "Generative & Workflow AI",
+      icon: "/images/aitools.png",
     },
   ],
 

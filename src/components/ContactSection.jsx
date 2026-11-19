@@ -11,6 +11,8 @@ export default function ContactSection({ darkMode }) {
     message: '',
   });
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
 
   const handleCopyEmail = () => {
     navigator.clipboard.writeText(portfolioData.contact.email);
@@ -18,14 +20,39 @@ export default function ContactSection({ darkMode }) {
     setTimeout(() => setCopied(false), 2000);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!formState.name || !formState.email || !formState.message) return;
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
-      setFormState({ name: '', email: '', service: 'Web Design', message: '' });
-    }, 4000);
+    setIsSubmitting(true);
+    setErrorMessage('');
+
+    try {
+      const response = await fetch(portfolioData.contact.formspreeUrl || 'https://formspree.io/f/mqpqlolp', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({
+          name: formState.name,
+          email: formState.email,
+          service: formState.service,
+          message: formState.message,
+        }),
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+        setFormState({ name: '', email: '', service: 'Web Design', message: '' });
+      } else {
+        const data = await response.json().catch(() => null);
+        setErrorMessage(data?.errors?.[0]?.message || 'Something went wrong. Please try again or reach out directly.');
+      }
+    } catch (err) {
+      setErrorMessage('Network connection error. Please try again or email me directly.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -264,16 +291,25 @@ export default function ContactSection({ darkMode }) {
                     ></textarea>
                   </div>
 
+                  {errorMessage && (
+                    <div className="p-3 rounded-xl bg-red-500/10 border border-red-500/30 text-red-500 text-xs font-medium">
+                      {errorMessage}
+                    </div>
+                  )}
+
                   <button
                     type="submit"
+                    disabled={isSubmitting}
                     className={`mt-2 flex items-center justify-center gap-2 py-4 rounded-full font-display font-bold text-lg uppercase tracking-wider transition-all duration-300 border ${
-                      darkMode
+                      isSubmitting
+                        ? 'opacity-70 cursor-not-allowed bg-neutral-500 text-white border-neutral-500'
+                        : darkMode
                         ? 'bg-[#00bdf1] text-black border-[#00bdf1] hover:bg-[#38d4ff] shadow-lg shadow-[#00bdf1]/20'
                         : 'bg-[#08b9d4] text-white border-[#08b9d4] hover:bg-[#07a3bb] shadow-lg shadow-[#08b9d4]/20'
                     }`}
                   >
-                    <span>Send Project Request</span>
-                    <Send size={16} />
+                    <span>{isSubmitting ? 'Sending Request...' : 'Send Project Request'}</span>
+                    <Send size={16} className={isSubmitting ? 'animate-pulse' : ''} />
                   </button>
                 </form>
               )}

@@ -276,6 +276,7 @@ export const portfolioData = {
     subtitle:
       "Have a project or opportunity in mind? Drop me a message and I'll respond within 24 hours.",
     email: "uniquecreativenotion@gmail.com",
+    formspreeUrl: "https://formspree.io/f/mqpqlolp",
     phone: "+2348131993400",
     phoneDisplay: "+234 813 199 3400",
     whatsappUrl: "https://wa.me/2348131993400",

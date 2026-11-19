@@ -84,7 +84,7 @@ export default function ContactSection({ darkMode }) {
               </div>
             </div>
 
-            {/* Phone & Location */}
+            {/* Location & Remote Availability */}
             <div
               className={`p-6 rounded-3xl border transition-all duration-300 flex items-center justify-between ${
                 darkMode ? 'bg-[#1c1c1c] border-[#303030]' : 'bg-[#f2f2f2] border-[#e3e3e3]'
@@ -93,23 +93,26 @@ export default function ContactSection({ darkMode }) {
               <div>
                 <div className="flex items-center gap-2 text-xs font-semibold tracking-wider uppercase text-[#08b9d4] dark:text-[#00bdf1]">
                   <Phone size={14} />
-                  <span>Call or WhatsApp</span>
+                  <span>Location & Availability</span>
                 </div>
-                <div className="font-bold text-lg mt-1">{portfolioData.contact.phone}</div>
+                <div className="font-bold text-base sm:text-lg mt-1">{portfolioData.contact.location}</div>
               </div>
               <a
-                href={`tel:${portfolioData.contact.phone}`}
+                href={portfolioData.contact.portfolioUrl}
+                target="_blank"
+                rel="noreferrer"
                 className={`p-3 rounded-full border transition-all duration-200 ${
                   darkMode
                     ? 'bg-[#242424] border-[#3a3a3a] text-white hover:bg-white hover:text-black'
                     : 'bg-white border-[#e0e0e0] text-black hover:bg-black hover:text-white'
                 }`}
+                title="View Existing Portfolio"
               >
                 <ArrowUpRight size={16} />
               </a>
             </div>
 
-            {/* Book a Call Consultation */}
+            {/* Direct Project Inquiry */}
             <div
               className={`p-6 sm:p-8 rounded-3xl border transition-all duration-300 relative overflow-hidden ${
                 darkMode ? 'bg-[#1c1c1c] border-[#303030]' : 'bg-[#f2f2f2] border-[#e3e3e3]'
@@ -117,7 +120,7 @@ export default function ContactSection({ darkMode }) {
             >
               <div className="flex items-center gap-2 text-xs font-semibold tracking-wider uppercase text-[#08b9d4] dark:text-[#00bdf1] mb-2">
                 <Calendar size={16} />
-                <span>Discovery Call</span>
+                <span>Project Collaboration</span>
               </div>
               <h4 className="font-display font-bold text-2xl uppercase tracking-tight mb-2">
                 {portfolioData.contact.consultationTitle}
@@ -130,9 +133,7 @@ export default function ContactSection({ darkMode }) {
                 {portfolioData.contact.consultationDesc}
               </p>
               <a
-                href="https://cal.com"
-                target="_blank"
-                rel="noreferrer"
+                href={`mailto:${portfolioData.contact.email}?subject=Project%20Inquiry%20for%20Thaddeaus`}
                 className={`inline-flex items-center gap-2 px-6 py-3 rounded-full text-xs font-bold tracking-wider uppercase transition-all duration-200 border ${
                   darkMode
                     ? 'bg-white text-black border-white hover:bg-neutral-200'

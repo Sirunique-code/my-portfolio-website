@@ -10,7 +10,7 @@ import NotFoundPage from './pages/NotFoundPage';
 export default function App() {
   const [currentPath, setCurrentPath] = useState(window.location.pathname || '/');
   const [darkMode, setDarkMode] = useState(() => {
-    const saved = localStorage.getItem('dean_theme');
+    const saved = localStorage.getItem('portfolio_theme');
     return saved ? saved === 'dark' : true;
   });
 
@@ -18,10 +18,10 @@ export default function App() {
     const root = document.documentElement;
     if (darkMode) {
       root.classList.add('dark');
-      localStorage.setItem('dean_theme', 'dark');
+      localStorage.setItem('portfolio_theme', 'dark');
     } else {
       root.classList.remove('dark');
-      localStorage.setItem('dean_theme', 'light');
+      localStorage.setItem('portfolio_theme', 'light');
     }
   }, [darkMode]);
 

@@ -3,8 +3,8 @@ import { portfolioData } from '../data/portfolioData';
 import { Sparkles, ArrowDownRight, ArrowUpRight } from 'lucide-react';
 
 export default function Hero({ darkMode, onNavigate }) {
-  const [activeRole, setActiveRole] = useState('GRAPHICS');
-  const roles = ['GRAPHICS', 'WEB', 'PRODUCT'];
+  const [activeRole, setActiveRole] = useState('GRAPHIC DESIGN');
+  const roles = ['GRAPHIC DESIGN', 'WEB DEV', 'BRANDING'];
 
   return (
     <section className="relative pt-32 pb-16 md:pt-40 md:pb-24 overflow-hidden">

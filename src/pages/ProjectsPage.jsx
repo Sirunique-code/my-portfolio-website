@@ -4,7 +4,7 @@ import { ArrowUpRight } from 'lucide-react';
 
 export default function ProjectsPage({ darkMode, onNavigate }) {
   const [filter, setFilter] = useState('All');
-  const categories = ['All', 'Website Design', 'Web design'];
+  const categories = ['All', ...new Set(portfolioData.projects.map((p) => p.category))];
 
   const filteredProjects =
     filter === 'All'

@@ -19,9 +19,9 @@ export default function AboutSection({ darkMode }) {
               darkMode ? 'text-[#cccccc]' : 'text-[#575757]'
             }`}
           >
-            I'm Dean, a multidisciplinary designer specializing in clean digital products,
-            websites, and brand systems. I bridge the gap between creative visual artistry
-            and high-converting functional design.
+            I am Thaddeaus Samuel, a multidisciplinary creative professional combining graphic design,
+            brand communication, and web development. With 6+ years of design experience and an academic
+            background in Computer Science, I turn ideas into functional, visually compelling solutions.
           </p>
         </div>
 

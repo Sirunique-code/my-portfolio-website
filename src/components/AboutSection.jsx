@@ -38,7 +38,7 @@ export default function AboutSection({ darkMode }) {
                 <span>My Stack</span>
               </div>
 
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-2 gap-3 sm:gap-4">
                 {portfolioData.stack.map((item) => (
                   <div
                     key={item.name}
@@ -100,9 +100,20 @@ export default function AboutSection({ darkMode }) {
                         }`}
                       >
                         Company &middot;{' '}
-                        <span className="text-black dark:text-white font-semibold">
-                          {job.company}
-                        </span>
+                        {job.companyUrl ? (
+                          <a
+                            href={job.companyUrl}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="font-semibold text-black dark:text-white hover:text-[#08b9d4] dark:hover:text-[#00bdf1] hover:underline transition-colors"
+                          >
+                            {job.company}
+                          </a>
+                        ) : (
+                          <span className="text-black dark:text-white font-semibold">
+                            {job.company}
+                          </span>
+                        )}
                       </p>
                     </div>
 

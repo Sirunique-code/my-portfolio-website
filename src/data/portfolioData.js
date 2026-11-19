@@ -34,6 +34,16 @@ export const portfolioData = {
       icon: "/images/photoshop.png",
     },
     {
+      name: "Laravel",
+      role: "PHP Web Framework",
+      icon: "/images/laravel.png",
+    },
+    {
+      name: "PHP",
+      role: "Backend & Web Logic",
+      icon: "/images/php.png",
+    },
+    {
       name: "VS Code",
       role: "Web Development (React/JS)",
       icon: "/images/vscode.png",
@@ -49,21 +59,25 @@ export const portfolioData = {
     {
       role: "Graphic Designer & Communication Lead",
       company: "VYDAX International Group",
+      companyUrl: "https://web.facebook.com/vydaxgroup",
       year: "2024  -  Present",
     },
     {
       role: "Visual Communications Manager",
       company: "Governor Crest Limited",
+      companyUrl: null,
       year: "2023  -  2024",
     },
     {
       role: "Graphics Design Lead",
       company: "Velyn Beauty & Essentials",
+      companyUrl: "https://www.instagram.com/velynbeauty_essentials/",
       year: "2022  -  2023",
     },
     {
       role: "Graphic Designer",
       company: "GLink Ventures",
+      companyUrl: "https://web.facebook.com/glinkventures",
       year: "2020  -  2022",
     },
   ],
@@ -81,7 +95,7 @@ export const portfolioData = {
       year: "2025",
       coverImage: "/images/projects/bimbo-ilori-cover.jpg",
       showcaseImage: "/images/projects/bimbo-ilori-showcase.jpg",
-      liveUrl: "https://sites.google.com/view/thaddeaus-samuel/home",
+      liveUrl: "https://bimboilori.com/",
     },
     {
       id: "wedding-invitation",
@@ -95,7 +109,7 @@ export const portfolioData = {
       year: "2024",
       coverImage: "/images/projects/wedding-invitation-cover.jpg",
       showcaseImage: "/images/projects/wedding-invitation-showcase.jpg",
-      liveUrl: "https://sites.google.com/view/thaddeaus-samuel/home",
+      liveUrl: "https://peace-emmmanuel-wedding.vercel.app/",
     },
     {
       id: "sales-forecasting",
@@ -109,7 +123,7 @@ export const portfolioData = {
       year: "2025",
       coverImage: "/images/projects/sales-forecasting-cover.jpg",
       showcaseImage: "/images/projects/sales-forecasting-showcase.jpg",
-      liveUrl: "https://sites.google.com/view/thaddeaus-samuel/home",
+      liveUrl: null,
     },
     {
       id: "brand-identity-suite",
@@ -123,7 +137,7 @@ export const portfolioData = {
       year: "2020 - 2026",
       coverImage: "/images/projects/brand-identity-cover.jpg",
       showcaseImage: "/images/projects/brand-identity-showcase.jpg",
-      liveUrl: "https://sites.google.com/view/thaddeaus-samuel/home",
+      liveUrl: "https://www.behance.net/Uniquedezigns",
     },
   ],
 
@@ -252,19 +266,20 @@ export const portfolioData = {
     subtitle:
       "Have a project or opportunity in mind? Drop me a message and I'll respond within 24 hours.",
     email: "uniquecreativenotion@gmail.com",
+    phone: "+2348131993400",
+    phoneDisplay: "+234 813 199 3400",
+    whatsappUrl: "https://wa.me/2348131993400",
     location: "Nigeria | Available for Remote Work",
-    portfolioUrl: "https://sites.google.com/view/thaddeaus-samuel/home",
     consultationTitle: "Prefer to discuss your project directly?",
     consultationDesc:
       "Share your ideas, goals, or requirements. I'm available for freelance projects, remote roles, and creative collaborations.",
     consultationCta: "Send Project Inquiry",
     video: "/images/contact.mp4",
     socials: [
-      { name: "LinkedIn", url: "https://linkedin.com/in/thaddeaus-samuel" },
-      { name: "GitHub", url: "https://github.com/thaddeaus-samuel" },
-      { name: "Behance", url: "https://behance.net/thaddeaus-samuel" },
-      { name: "Portfolio", url: "https://sites.google.com/view/thaddeaus-samuel/home" },
-      { name: "WhatsApp", url: "https://wa.me/234" },
+      { name: "LinkedIn", url: "https://www.linkedin.com/in/thaddeaus-samuel-795876226/" },
+      { name: "GitHub", url: "https://github.com/Sirunique-code" },
+      { name: "Behance", url: "https://www.behance.net/Uniquedezigns" },
+      { name: "WhatsApp", url: "https://wa.me/2348131993400" },
     ],
   },
 

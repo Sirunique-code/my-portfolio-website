@@ -222,7 +222,7 @@ export default function Navbar({ currentPath, onNavigate, darkMode, setDarkMode 
           </div>
 
           <div className="flex items-center justify-between pt-6 border-t border-neutral-800 text-xs text-[#575757]">
-            <span>{portfolioData.profile.name} Portfolio</span>
+            <span>{portfolioData.profile.name}</span>
             <div className="flex gap-4">
               {portfolioData.contact.socials.slice(0, 3).map((s) => (
                 <a

@@ -93,19 +93,31 @@ export default function ProjectDetailPage({ slug, darkMode, onNavigate }) {
             </div>
           </div>
 
-          <a
-            href={project.liveUrl}
-            target="_blank"
-            rel="noreferrer"
-            className={`inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full text-xs font-bold tracking-wider uppercase transition-all duration-200 border self-start md:self-auto ${
-              darkMode
-                ? 'bg-[#00bdf1] text-black border-[#00bdf1] hover:bg-[#38d4ff] shadow-lg shadow-[#00bdf1]/20'
-                : 'bg-[#08b9d4] text-white border-[#08b9d4] hover:bg-[#07a3bb] shadow-lg shadow-[#08b9d4]/20'
-            }`}
-          >
-            <span>Live Demo</span>
-            <ExternalLink size={14} />
-          </a>
+          {project.liveUrl ? (
+            <a
+              href={project.liveUrl}
+              target="_blank"
+              rel="noreferrer"
+              className={`inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full text-xs font-bold tracking-wider uppercase transition-all duration-200 border self-start md:self-auto ${
+                darkMode
+                  ? 'bg-[#00bdf1] text-black border-[#00bdf1] hover:bg-[#38d4ff] shadow-lg shadow-[#00bdf1]/20'
+                  : 'bg-[#08b9d4] text-white border-[#08b9d4] hover:bg-[#07a3bb] shadow-lg shadow-[#08b9d4]/20'
+              }`}
+            >
+              <span>Live Demo</span>
+              <ExternalLink size={14} />
+            </a>
+          ) : (
+            <div
+              className={`inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full text-xs font-bold tracking-wider uppercase border opacity-70 self-start md:self-auto ${
+                darkMode
+                  ? 'bg-[#242424] text-neutral-400 border-[#3a3a3a]'
+                  : 'bg-neutral-200 text-neutral-500 border-neutral-300'
+              }`}
+            >
+              <span>Live Demo Pending</span>
+            </div>
+          )}
         </div>
 
         {/* Visual Showcase Gallery */}

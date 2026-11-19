@@ -84,7 +84,7 @@ export default function ContactSection({ darkMode }) {
               </div>
             </div>
 
-            {/* Location & Remote Availability */}
+            {/* WhatsApp & Phone */}
             <div
               className={`p-6 rounded-3xl border transition-all duration-300 flex items-center justify-between ${
                 darkMode ? 'bg-[#1c1c1c] border-[#303030]' : 'bg-[#f2f2f2] border-[#e3e3e3]'
@@ -93,12 +93,12 @@ export default function ContactSection({ darkMode }) {
               <div>
                 <div className="flex items-center gap-2 text-xs font-semibold tracking-wider uppercase text-[#08b9d4] dark:text-[#00bdf1]">
                   <Phone size={14} />
-                  <span>Location & Availability</span>
+                  <span>WhatsApp & Call</span>
                 </div>
-                <div className="font-bold text-base sm:text-lg mt-1">{portfolioData.contact.location}</div>
+                <div className="font-bold text-base sm:text-lg mt-1">{portfolioData.contact.phoneDisplay}</div>
               </div>
               <a
-                href={portfolioData.contact.portfolioUrl}
+                href={portfolioData.contact.whatsappUrl}
                 target="_blank"
                 rel="noreferrer"
                 className={`p-3 rounded-full border transition-all duration-200 ${
@@ -106,7 +106,7 @@ export default function ContactSection({ darkMode }) {
                     ? 'bg-[#242424] border-[#3a3a3a] text-white hover:bg-white hover:text-black'
                     : 'bg-white border-[#e0e0e0] text-black hover:bg-black hover:text-white'
                 }`}
-                title="View Existing Portfolio"
+                title="Chat on WhatsApp"
               >
                 <ArrowUpRight size={16} />
               </a>

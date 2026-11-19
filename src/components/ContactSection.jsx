@@ -224,7 +224,7 @@ export default function ContactSection({ darkMode }) {
                     <input
                       type="text"
                       required
-                      placeholder="Jane Doe"
+                      placeholder="Thaddeaus Samuel"
                       value={formState.name}
                       onChange={(e) => setFormState({ ...formState, name: e.target.value })}
                       className={`w-full px-4 py-3 rounded-2xl border text-sm transition-all focus:outline-none focus:ring-2 focus:ring-[#08b9d4] ${
@@ -242,7 +242,7 @@ export default function ContactSection({ darkMode }) {
                     <input
                       type="email"
                       required
-                      placeholder="jane@example.com"
+                      placeholder="thaddeaus@example.com"
                       value={formState.email}
                       onChange={(e) => setFormState({ ...formState, email: e.target.value })}
                       className={`w-full px-4 py-3 rounded-2xl border text-sm transition-all focus:outline-none focus:ring-2 focus:ring-[#08b9d4] ${

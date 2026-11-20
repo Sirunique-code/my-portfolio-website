@@ -17,7 +17,7 @@ export const portfolioData = {
     { value: "6+", label: "Years of Design Experience" },
     { value: "30+", label: "Publications & Book Covers" },
     { value: "10+", label: "Organizations Served" },
-    { value: "100%", label: "Client Satisfaction" },
+    { value: "95%", label: "Client Satisfaction" },
   ],
 
   stack: [

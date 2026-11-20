@@ -31,7 +31,7 @@ The preview server is running locally at:
    - `6+` Years of Design Experience
    - `30+` Publications & Book Covers
    - `10+` Organizations Served
-   - `100%` Client Satisfaction
+   - `95%` Client Satisfaction
 
 4. **Projects Showcase**:
    - Interactive project grid with hover effects, tags, and case study links.

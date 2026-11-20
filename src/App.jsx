@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
@@ -78,6 +79,7 @@ export default function App() {
       />
       {renderContent()}
       <Footer darkMode={darkMode} onNavigate={handleNavigate} />
+      <Analytics />
     </div>
   );
 }

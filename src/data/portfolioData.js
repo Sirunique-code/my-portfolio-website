@@ -74,19 +74,19 @@ export const portfolioData = {
       role: "Visual Communications Manager",
       company: "Governor Crest Limited",
       companyUrl: null,
-      year: "2023  -  2024",
+      year: "2026",
     },
     {
       role: "Graphics Design Lead",
       company: "Velyn Beauty & Essentials",
       companyUrl: "https://www.instagram.com/velynbeauty_essentials/",
-      year: "2022  -  2023",
+      year: "2026",
     },
     {
       role: "Graphic Designer",
       company: "GLink Ventures",
       companyUrl: "https://web.facebook.com/glinkventures",
-      year: "2020  -  2022",
+      year: "2026",
     },
   ],
 

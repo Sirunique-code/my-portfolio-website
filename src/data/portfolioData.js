@@ -68,7 +68,7 @@ export const portfolioData = {
       role: "Graphic Designer & Communication Lead",
       company: "VYDAX International Group",
       companyUrl: "https://web.facebook.com/vydaxgroup",
-      year: "2024  -  Present",
+      year: "2025  -  2026",
     },
     {
       role: "Visual Communications Manager",

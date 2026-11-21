@@ -10,10 +10,22 @@ import NotFoundPage from './pages/NotFoundPage';
 
 export default function App() {
   const [currentPath, setCurrentPath] = useState(window.location.pathname || '/');
+  const [scrollProgress, setScrollProgress] = useState(0);
   const [darkMode, setDarkMode] = useState(() => {
     const saved = localStorage.getItem('portfolio_theme');
     return saved ? saved === 'dark' : true;
   });
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const totalScroll = document.documentElement.scrollHeight - window.innerHeight;
+      if (totalScroll > 0) {
+        setScrollProgress((window.scrollY / totalScroll) * 100);
+      }
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   useEffect(() => {
     const root = document.documentElement;
@@ -71,6 +83,15 @@ export default function App() {
         darkMode ? 'bg-[#0f0f0f] text-white' : 'bg-white text-black'
       }`}
     >
+      {/* Sleek Top Reading Progress Bar */}
+      <div
+        className="fixed top-0 left-0 right-0 h-[2.5px] z-50 pointer-events-none transition-all duration-75"
+        style={{
+          width: `${scrollProgress}%`,
+          background: 'linear-gradient(90deg, #08b9d4, #00bdf1, #44c92c)',
+        }}
+      />
+
       <Navbar
         currentPath={currentPath}
         onNavigate={handleNavigate}

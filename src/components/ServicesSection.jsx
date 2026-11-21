@@ -78,10 +78,10 @@ export default function ServicesSection({ darkMode, onNavigate }) {
                   {service.deliverables.map((d) => (
                     <span
                       key={d}
-                      className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium border ${
+                      className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium border transition-all duration-200 hover:scale-102 ${
                         darkMode
-                          ? 'bg-[#242424] border-[#3a3a3a] text-neutral-200'
-                          : 'bg-white border-[#e0e0e0] text-neutral-800'
+                          ? 'bg-[#242424] border-[#3a3a3a] text-neutral-200 hover:border-[#00bdf1]/50'
+                          : 'bg-white border-[#e0e0e0] text-neutral-800 hover:border-[#08b9d4]/50'
                       }`}
                     >
                       <Check size={12} className="text-[#08b9d4] dark:text-[#00bdf1]" />

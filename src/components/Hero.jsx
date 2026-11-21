@@ -6,6 +6,12 @@ export default function Hero({ darkMode, onNavigate }) {
   const [activeRole, setActiveRole] = useState('GRAPHIC DESIGN');
   const roles = ['GRAPHIC DESIGN', 'WEB DEV', 'BRANDING'];
 
+  const roleHighlights = {
+    'GRAPHIC DESIGN': 'Editorial, Brand Collateral & Vector Print Systems',
+    'WEB DEV': 'High-Performance React/Vite, Laravel & Clean Architecture',
+    'BRANDING': 'Visual Identity, Typography Guidelines & Creative Direction',
+  };
+
   return (
     <section className="relative pt-32 pb-16 md:pt-40 md:pb-24 overflow-hidden">
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6 flex flex-col items-center text-center">
@@ -44,45 +50,55 @@ export default function Hero({ darkMode, onNavigate }) {
         </div>
 
         {/* Central 3D Animated Mascot / Video Box */}
-        <div className="relative w-full max-w-[960px] mt-6 sm:mt-10 rounded-2xl sm:rounded-3xl overflow-hidden border transition-all duration-300 shadow-2xl bg-neutral-900 group">
-          <div
-            className={`absolute inset-0 pointer-events-none border transition-colors duration-300 z-10 rounded-2xl sm:rounded-3xl ${
-              darkMode ? 'border-[#303030]' : 'border-[#e3e3e3]'
-            }`}
-          ></div>
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            poster={portfolioData.profile.heroPoster}
-            className="w-full h-[280px] sm:h-[420px] md:h-[500px] object-cover object-center group-hover:scale-102 transition-transform duration-700"
-          >
-            <source src={portfolioData.profile.heroVideo} type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+        <div className="relative w-full max-w-[960px] mt-6 sm:mt-10 rounded-2xl sm:rounded-3xl border transition-all duration-300 shadow-2xl bg-neutral-900 group">
+          {/* Ambient Studio Backlight Glow */}
+          <div className="absolute -inset-3 bg-gradient-to-r from-[#08b9d4]/20 via-[#44c92c]/10 to-[#00bdf1]/20 rounded-3xl blur-2xl opacity-40 group-hover:opacity-65 transition-opacity duration-700 pointer-events-none -z-10"></div>
 
-          {/* Interactive Floating Tags inside Hero Media */}
-          <div className="absolute top-4 left-4 z-20 hidden sm:flex items-center gap-2">
-            {roles.map((r) => (
-              <button
-                key={r}
-                onClick={() => setActiveRole(r)}
-                className={`px-3 py-1 rounded-full text-[11px] font-semibold tracking-wider uppercase transition-all duration-200 backdrop-blur-md border ${
-                  activeRole === r
-                    ? 'bg-white text-black border-white shadow-md'
-                    : 'bg-black/60 text-white/80 border-white/20 hover:bg-black/80'
-                }`}
-              >
-                {r}
-              </button>
-            ))}
-          </div>
+          <div className="relative w-full overflow-hidden rounded-2xl sm:rounded-3xl">
+            <div
+              className={`absolute inset-0 pointer-events-none border transition-colors duration-300 z-10 rounded-2xl sm:rounded-3xl ${
+                darkMode ? 'border-[#303030]' : 'border-[#e3e3e3]'
+              }`}
+            ></div>
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-[280px] sm:h-[420px] md:h-[500px] object-cover object-center group-hover:scale-102 transition-transform duration-700"
+            >
+              <source src={portfolioData.profile.heroVideo} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
 
-          <div className="absolute bottom-4 right-4 z-20 hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-[11px] text-white">
-            <span className="w-2 h-2 rounded-full bg-[#44c92c] animate-pulse"></span>
-            <span>Based in Nigeria &middot; Available Globally</span>
+            {/* Interactive Floating Role Selectors inside Hero Media */}
+            <div className="absolute top-4 left-4 z-20 hidden sm:flex items-center gap-2">
+              {roles.map((r) => (
+                <button
+                  key={r}
+                  onClick={() => setActiveRole(r)}
+                  className={`px-3 py-1 rounded-full text-[11px] font-semibold tracking-wider uppercase transition-all duration-200 backdrop-blur-md border ${
+                    activeRole === r
+                      ? 'bg-white text-black border-white shadow-md'
+                      : 'bg-black/60 text-white/80 border-white/20 hover:bg-black/80'
+                  }`}
+                >
+                  {r}
+                </button>
+              ))}
+            </div>
+
+            <div className="absolute bottom-4 right-4 z-20 hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-[11px] text-white">
+              <span className="w-2 h-2 rounded-full bg-[#44c92c] animate-pulse"></span>
+              <span>Based in Nigeria &middot; Available Globally</span>
+            </div>
           </div>
+        </div>
+
+        {/* Dynamic Focus Area Badge */}
+        <div className="mt-5 hidden sm:inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-medium border bg-[#141414]/40 dark:bg-[#141414]/40 border-neutral-300/30 dark:border-white/10 text-[#08b9d4] dark:text-[#00bdf1] transition-all">
+          <span className="w-1.5 h-1.5 rounded-full bg-[#08b9d4] dark:bg-[#00bdf1]"></span>
+          <span>Focus: {roleHighlights[activeRole]}</span>
         </div>
 
         {/* Subtitle & Action CTAs */}

@@ -1,6 +1,6 @@
 import React from 'react';
 import { portfolioData } from '../data/portfolioData';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, ExternalLink } from 'lucide-react';
 
 export default function ProjectsSection({ darkMode, onNavigate }) {
   return (
@@ -55,6 +55,21 @@ export default function ProjectsSection({ darkMode, onNavigate }) {
                     {project.category}
                   </span>
                 </div>
+
+                {project.liveUrl && (
+                  <div className="absolute top-3 right-3">
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      onClick={(e) => e.stopPropagation()}
+                      className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold tracking-wide uppercase bg-black/70 hover:bg-[#08b9d4] dark:hover:bg-[#00bdf1] hover:text-black transition-all duration-200 backdrop-blur-md text-white border border-white/20 shadow-md group/demo"
+                    >
+                      <span>Live Demo</span>
+                      <ExternalLink size={11} className="group-hover/demo:translate-x-0.5 transition-transform" />
+                    </a>
+                  </div>
+                )}
               </div>
 
               {/* Card Meta & Arrow */}
@@ -70,10 +85,15 @@ export default function ProjectsSection({ darkMode, onNavigate }) {
                   >
                     {project.description}
                   </p>
+                  <div className="flex items-center gap-3 mt-2 text-[11px] text-[#575757] dark:text-[#888]">
+                    <span>{project.client}</span>
+                    <span>&bull;</span>
+                    <span>{project.year}</span>
+                  </div>
                 </div>
 
                 <div
-                  className={`w-10 h-10 rounded-full flex items-center justify-center border transition-all duration-300 group-hover:scale-110 ${
+                  className={`w-10 h-10 rounded-full flex items-center justify-center border transition-all duration-300 group-hover:scale-110 flex-shrink-0 ${
                     darkMode
                       ? 'bg-[#242424] border-[#3a3a3a] text-white group-hover:bg-white group-hover:text-black'
                       : 'bg-[#e5e5e5] border-[#d4d4d4] text-black group-hover:bg-black group-hover:text-white'

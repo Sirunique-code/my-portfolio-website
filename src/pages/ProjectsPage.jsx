@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { portfolioData } from '../data/portfolioData';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, ExternalLink } from 'lucide-react';
 
 export default function ProjectsPage({ darkMode, onNavigate }) {
   const [filter, setFilter] = useState('All');
@@ -98,6 +98,21 @@ export default function ProjectsPage({ darkMode, onNavigate }) {
                     {project.category}
                   </span>
                 </div>
+
+                {project.liveUrl && (
+                  <div className="absolute top-3 right-3">
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      onClick={(e) => e.stopPropagation()}
+                      className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold tracking-wide uppercase bg-black/70 hover:bg-[#08b9d4] dark:hover:bg-[#00bdf1] hover:text-black transition-all duration-200 backdrop-blur-md text-white border border-white/20 shadow-md group/demo"
+                    >
+                      <span>Live Demo</span>
+                      <ExternalLink size={11} className="group-hover/demo:translate-x-0.5 transition-transform" />
+                    </a>
+                  </div>
+                )}
               </div>
 
               {/* Card Meta & Arrow */}

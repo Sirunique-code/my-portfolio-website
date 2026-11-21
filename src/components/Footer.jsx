@@ -16,12 +16,14 @@ export default function Footer({ darkMode, onNavigate }) {
             const el = document.getElementById('contact');
             if (el) el.scrollIntoView({ behavior: 'smooth' });
           }}
-          className={`cursor-pointer p-8 sm:p-16 rounded-3xl border transition-all duration-300 group relative overflow-hidden mb-16 ${
+          className={`cursor-pointer p-8 sm:p-16 rounded-3xl border transition-all duration-300 group relative overflow-hidden mb-16 shadow-2xl ${
             darkMode
-              ? 'bg-[#1c1c1c] border-[#303030] hover:border-[#555] hover:bg-[#222222]'
+              ? 'bg-[#1c1c1c] border-[#303030] hover:border-[#555] hover:bg-[#202020]'
               : 'bg-[#f2f2f2] border-[#e3e3e3] hover:border-neutral-400 hover:bg-[#eaeaea]'
           }`}
         >
+          {/* Subtle Ambient Hover Glow */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#08b9d4]/10 via-[#00bdf1]/5 to-[#44c92c]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6 relative z-10">
             <div>
               <span className="text-xs uppercase font-semibold tracking-widest text-[#08b9d4] dark:text-[#00bdf1] block mb-2">

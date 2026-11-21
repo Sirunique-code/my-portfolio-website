@@ -1,6 +1,6 @@
 import React from 'react';
 import { portfolioData } from '../data/portfolioData';
-import { Briefcase, Layers } from 'lucide-react';
+import { Briefcase, Layers, FileText, ArrowUpRight } from 'lucide-react';
 
 export default function AboutSection({ darkMode }) {
   return (
@@ -23,6 +23,20 @@ export default function AboutSection({ darkMode }) {
             brand communication, and web development. With 6+ years of design experience and an academic
             background in Computer Science, I turn ideas into functional, visually compelling solutions.
           </p>
+
+          <div className="mt-6 flex flex-wrap items-center gap-3">
+            <a
+              href={`mailto:${portfolioData.contact.email}?subject=Resume%20Request%20-%20Thaddeaus%20Samuel`}
+              className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider uppercase transition-all duration-200 border ${
+                darkMode
+                  ? 'bg-[#1c1c1c] text-white border-[#303030] hover:bg-[#252525] hover:border-neutral-500'
+                  : 'bg-[#f2f2f2] text-black border-[#e3e3e3] hover:bg-[#e8e8e8] hover:border-neutral-400'
+              }`}
+            >
+              <FileText size={14} className="text-[#08b9d4] dark:text-[#00bdf1]" />
+              <span>Request Resume / CV</span>
+            </a>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
@@ -105,9 +119,10 @@ export default function AboutSection({ darkMode }) {
                             href={job.companyUrl}
                             target="_blank"
                             rel="noreferrer"
-                            className="font-semibold text-black dark:text-white hover:text-[#08b9d4] dark:hover:text-[#00bdf1] hover:underline transition-colors"
+                            className="inline-flex items-center gap-1 font-semibold text-black dark:text-white hover:text-[#08b9d4] dark:hover:text-[#00bdf1] hover:underline transition-colors"
                           >
-                            {job.company}
+                            <span>{job.company}</span>
+                            <ArrowUpRight size={12} className="opacity-60" />
                           </a>
                         ) : (
                           <span className="text-black dark:text-white font-semibold">

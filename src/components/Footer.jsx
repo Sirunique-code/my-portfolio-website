@@ -107,6 +107,15 @@ export default function Footer({ darkMode, onNavigate }) {
             >
               About
             </a>
+            <a
+              href={portfolioData.profile.resume}
+              target="_blank"
+              rel="noreferrer"
+              className="hover:text-[#08b9d4] dark:hover:text-[#00bdf1] transition-colors inline-flex items-center gap-1"
+            >
+              <span>Resume</span>
+              <ArrowUpRight size={12} className="opacity-70" />
+            </a>
           </div>
 
           {/* Socials */}

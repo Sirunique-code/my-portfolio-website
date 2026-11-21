@@ -1,6 +1,6 @@
 import React from 'react';
 import { portfolioData } from '../data/portfolioData';
-import { Briefcase, Layers, FileText, ArrowUpRight } from 'lucide-react';
+import { Briefcase, Layers, FileText, ArrowUpRight, Download, ExternalLink } from 'lucide-react';
 
 export default function AboutSection({ darkMode }) {
   return (
@@ -25,16 +25,34 @@ export default function AboutSection({ darkMode }) {
           </p>
 
           <div className="mt-6 flex flex-wrap items-center gap-3">
+            {/* Quick Preview in Browser */}
             <a
-              href={`mailto:${portfolioData.contact.email}?subject=Resume%20Request%20-%20Thaddeaus%20Samuel`}
+              href={portfolioData.profile.resume}
+              target="_blank"
+              rel="noreferrer"
+              className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider uppercase transition-all duration-200 border ${
+                darkMode
+                  ? 'bg-white text-black border-white hover:bg-neutral-200 shadow-md shadow-white/5'
+                  : 'bg-black text-white border-black hover:bg-neutral-800 shadow-md shadow-black/5'
+              }`}
+            >
+              <FileText size={14} />
+              <span>Preview Resume</span>
+              <ExternalLink size={12} className="opacity-70" />
+            </a>
+
+            {/* Direct Download */}
+            <a
+              href={portfolioData.profile.resume}
+              download="Thaddeaus Samuel - CV.pdf"
               className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider uppercase transition-all duration-200 border ${
                 darkMode
                   ? 'bg-[#1c1c1c] text-white border-[#303030] hover:bg-[#252525] hover:border-neutral-500'
                   : 'bg-[#f2f2f2] text-black border-[#e3e3e3] hover:bg-[#e8e8e8] hover:border-neutral-400'
               }`}
             >
-              <FileText size={14} className="text-[#08b9d4] dark:text-[#00bdf1]" />
-              <span>Request Resume / CV</span>
+              <Download size={14} className="text-[#08b9d4] dark:text-[#00bdf1]" />
+              <span>Download CV (PDF)</span>
             </a>
           </div>
         </div>

@@ -8,6 +8,7 @@ export const portfolioData = {
     headlinePart2: "DEVELOPER",
     avatar: "/images/avatar.png",
     heroVideo: "/images/hero-character.mp4",
+    resume: "/document/Thaddeaus Samuel - CV.pdf",
     statusText: "Available for work",
     chatButtonText: "Let's Connect",
     bio: "Creating visual identities and digital experiences that communicate, connect, and deliver results. Blending 6+ years of design with a Computer Science foundation.",

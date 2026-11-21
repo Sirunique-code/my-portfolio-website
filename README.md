@@ -43,8 +43,9 @@ The preview server is running locally at:
 
 5. **About & Tech Stack**:
    - Professional bio and design/development philosophy.
+   - **Resume / CV**: 1-click in-browser preview and direct PDF download integration.
    - **Tech Stack**: Figma, Photoshop, CorelDRAW, Laravel, PHP, VS Code (React/JS), Python, and AI Tools.
-   - **Experience Timeline**: Detailed records at VYDAX International Group, GLink Ventures, Velyn Beauty & Essentials, and Freelance.
+   - **Experience Timeline**: Detailed records at VYDAX International Group, Governor Crest Limited, Velyn Beauty & Essentials, and GLink Ventures.
 
 6. **Services & Process**:
    - 4 Core Services: Web Design, Branding & Identity, Product & UI/UX Design, Graphics Design.

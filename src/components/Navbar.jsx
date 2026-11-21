@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { portfolioData } from '../data/portfolioData';
-import { Sun, Moon, Menu, X, ArrowUpRight, MessageCircle } from 'lucide-react';
+import { Sun, Moon, Menu, X, ArrowUpRight, MessageCircle, FileText } from 'lucide-react';
 
 export default function Navbar({ currentPath, onNavigate, darkMode, setDarkMode }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -287,6 +287,26 @@ export default function Navbar({ currentPath, onNavigate, darkMode, setDarkMode 
                 </a>
               );
             })}
+
+            {/* Direct Resume Link in Mobile Menu */}
+            <a
+              href={portfolioData.profile.resume}
+              target="_blank"
+              rel="noreferrer"
+              className={`group flex items-center justify-between px-5 py-3 rounded-2xl transition-all duration-200 border mt-1 ${
+                darkMode
+                  ? 'border-[#242424] bg-[#141414] text-neutral-300 hover:text-white hover:border-[#383838]'
+                  : 'border-[#e8e8e8] bg-[#f9f9f9] text-neutral-700 hover:text-black hover:border-[#d0d0d0]'
+              }`}
+            >
+              <div className="flex items-center gap-3">
+                <FileText size={16} className="text-[#08b9d4] dark:text-[#00bdf1]" />
+                <span className="font-display font-bold text-xl uppercase tracking-tight">
+                  Resume / CV (PDF)
+                </span>
+              </div>
+              <ArrowUpRight size={16} className="opacity-50 group-hover:opacity-100 transition-opacity" />
+            </a>
           </nav>
 
           {/* Bottom Card: Availability, Direct CTA & Socials */}

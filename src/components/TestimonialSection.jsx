@@ -18,11 +18,10 @@ export default function TestimonialSection({ darkMode }) {
 
         {/* Big Testimonial Card */}
         <div
-          className={`max-w-3xl mx-auto p-8 sm:p-12 rounded-3xl border transition-all duration-300 text-center flex flex-col items-center relative overflow-hidden shadow-2xl group ${
-            darkMode
+          className={`max-w-3xl mx-auto p-8 sm:p-12 rounded-3xl border transition-all duration-300 text-center flex flex-col items-center relative overflow-hidden shadow-2xl group ${darkMode
               ? 'bg-[#1c1c1c] border-[#303030] hover:border-[#555]'
               : 'bg-[#f2f2f2] border-[#e3e3e3] hover:border-neutral-400'
-          }`}
+            }`}
         >
           {/* Subtle Decorative Watermark */}
           <Quote
@@ -63,9 +62,8 @@ export default function TestimonialSection({ darkMode }) {
                 {portfolioData.testimonial.author}
               </div>
               <div
-                className={`text-xs ${
-                  darkMode ? 'text-[#a1a1a1]' : 'text-[#616161]'
-                }`}
+                className={`text-xs ${darkMode ? 'text-[#a1a1a1]' : 'text-[#616161]'
+                  }`}
               >
                 {portfolioData.testimonial.role}
               </div>

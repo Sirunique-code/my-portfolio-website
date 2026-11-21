@@ -38,7 +38,7 @@ The preview server is running locally at:
    - Featured projects:
      - **Bimbo Ilori** (`/projects/bimbo-ilori`): Author portfolio & literary showcase ([Live Site](https://bimboilori.com/))
      - **Wedding Invitation** (`/projects/wedding-invitation`): Interactive digital invitation & RSVP platform ([Live Site](https://peace-emmmanuel-wedding.vercel.app/))
-     - **Sales Forecasting** (`/projects/sales-forecasting`): Predictive retail revenue dashboard (ML & Streamlit)
+     - **Sales Forecasting** (`/projects/sales-forecasting`): Predictive retail revenue dashboard ([Live Demo](https://multi-business-sale-forcasting-web.vercel.app/))
      - **Brand Identity & Visual Design** (`/projects/brand-identity`): Comprehensive identity systems & print design ([Behance](https://www.behance.net/Uniquedezigns))
 
 5. **About & Tech Stack**:

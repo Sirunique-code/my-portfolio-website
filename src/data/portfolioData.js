@@ -131,7 +131,7 @@ export const portfolioData = {
       year: "2025",
       coverImage: "/images/projects/sales-forecasting-cover.jpg",
       showcaseImage: "/images/projects/sales-forecasting-showcase.jpg",
-      liveUrl: null,
+      liveUrl: "https://multi-business-sale-forcasting-web.vercel.app/",
     },
     {
       id: "brand-identity-suite",

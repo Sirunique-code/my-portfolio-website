@@ -268,7 +268,7 @@ export default function ContactSection({ darkMode }) {
                     >
                       <option value="Web Design">Web Design</option>
                       <option value="Branding">Branding & Identity</option>
-                      <option value="Product Design">Product & UI/UX Design</option>
+                      <option value="Social Media Management">Social Media Management & Ads</option>
                       <option value="Graphics Design">Graphics & Visual Assets</option>
                     </select>
                   </div>

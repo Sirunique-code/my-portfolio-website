@@ -48,7 +48,7 @@ The preview server is running locally at:
    - **Experience Timeline**: Detailed records at VYDAX International Group, Governor Crest Limited, Velyn Beauty & Essentials, and GLink Ventures.
 
 6. **Services & Process**:
-   - 4 Core Services: Web Design, Branding & Identity, Product & UI/UX Design, Graphics Design.
+   - 4 Core Services: Graphic Design & Branding, Web Design & Development, Social Media Management, Web Apps & Intelligent Solutions.
    - 3-step design workflow: `01 Discovery & Strategy`, `02 Design & Iteration`, `03 Development & Launch`.
    - Character reaction video clips corresponding to each phase.
 

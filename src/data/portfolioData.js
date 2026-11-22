@@ -179,15 +179,15 @@ export const portfolioData = {
     },
     {
       number: "03",
-      title: "UI/UX DESIGN",
-      tagline: "User-Centered Interfaces",
+      title: "SOCIAL MEDIA MANAGEMENT",
+      tagline: "Growth, Ads & Publicity",
       description:
-        "Crafting intuitive digital interfaces rooted in user research, wireframing, and interactive prototyping to solve real product problems.",
+        "Managing and scaling digital brand presence through high-converting ad campaigns, scheduled content distribution, community engagement, and strategic online publicity.",
       deliverables: [
-        "User Interface Design (Figma)",
-        "Interactive Prototyping",
-        "Wireframing & User Journeys",
-        "Design Systems & Component Kits",
+        "Targeted Paid Ad Campaigns (Meta/IG/FB)",
+        "Content Calendar & Post Scheduling",
+        "Brand Publicity & Audience Growth",
+        "Performance Analytics & Campaign Reports",
       ],
     },
     {
@@ -251,7 +251,7 @@ export const portfolioData = {
     {
       question: "What disciplines do you specialize in?",
       answer:
-        "I specialize in graphic design and brand identity systems, modern responsive web design and front-end development, UI/UX prototyping in Figma, and data-driven web applications.",
+        "I specialize in graphic design and brand identity systems, modern responsive web design and front-end development, social media management & targeted ad campaigns, and data-driven web applications.",
     },
     {
       question: "What is your typical project timeline?",
@@ -299,7 +299,7 @@ export const portfolioData = {
       "Brand Consistency",
       "Modern Web Design",
       "Clean Code",
-      "UI/UX Prototyping",
+      "Social Media Management",
       "Data-Driven Solutions",
       "Clear Process",
       "Thoughtful Execution",
@@ -308,7 +308,8 @@ export const portfolioData = {
       "Graphic Design",
       "Brand Identity",
       "Web Development",
-      "UI/UX Prototyping",
+      "Social Media Management",
+      "Targeted Ads & Publicity",
       "Editorial & Publications",
       "Predictive Analytics",
       "Creative Direction",
